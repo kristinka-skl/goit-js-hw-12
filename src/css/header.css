@@ -1,0 +1,21 @@
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+}
+.nav-link {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: 200ms ease-in;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #747bff;
+}
+.main-title {
+  margin-bottom: 32px;
+}
