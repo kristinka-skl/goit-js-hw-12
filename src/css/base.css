@@ -55,7 +55,8 @@ main:has(.back-link) {
   padding-left: 4px;
 }
 
-.form button {
+.form button,
+.load-more-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,8 +76,14 @@ main:has(.back-link) {
   transition: background-color 250ms ease-in-out;
 }
 
+.load-more-btn {
+  min-width: 120px;
+}
+
 .form button:hover,
-.form button:focus {
+.form button:focus,
+.load-more-btn:hover,
+.load-more-btn:focus {
   background-color: #879ff5;
 }
 
@@ -98,6 +105,7 @@ main:has(.back-link) {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  margin-bottom: 26px;
 }
 
 .img-card {

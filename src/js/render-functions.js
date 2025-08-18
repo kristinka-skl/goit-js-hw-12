@@ -21,6 +21,11 @@ export function renderImages(imgArr) {
   refs.imagesList.innerHTML = markup;
   lightbox.refresh();  
 }
+export function renderMoreImages(imgArr) {
+    const markup = imgArr.map(imageTemplate).join('');
+    refs.imagesList.insertAdjacentHTML('beforeend', markup);
+    lightbox.refresh();
+}
 export function clearGallery() {
     refs.imagesList.innerHTML = '';
 }
@@ -30,4 +35,11 @@ export function showLoadInfo() {
 }
 export function hideLoadInfo() {
     refs.loaderElem.classList.add('visually-hidden');
- }
+}
+ 
+export function showLoadMoreButton() {
+    refs.loadMoreElem.classList.remove('visually-hidden');
+}
+export function hideLoadMoreButton() {
+    refs.loadMoreElem.classList.add('visually-hidden');
+}
