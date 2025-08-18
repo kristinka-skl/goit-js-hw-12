@@ -68,11 +68,13 @@ async function handleFormElem(e) {
 
 async function handleLoadMore() {
     try {        
+        hideLoadMoreButton();
         showLoadInfo();
         currentPage += 1;
         const data = await getImagesByQuery(query, currentPage);
         const imgArr = data.hits;
         renderMoreImages(imgArr);
+        
         checkLoadMoreButton();
         const rect = document.querySelector('.img-card').getBoundingClientRect();            
             window.scrollBy({ 
