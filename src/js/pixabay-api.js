@@ -17,3 +17,20 @@ export async function getImagesByQuery(query, currentPage) {
     const res = await axios.get();
     return res.data;
 }
+
+
+// const api = axios.create({
+//     baseURL: 'https://pixabay.com/api/',
+//     params: {
+//         key: '51701755-afeeef66c15ff24568cee0a11',
+//         image_type: 'photo',
+//         orientation: 'horizontal',
+//         safesearch: true,
+//         per_page: 15,
+//     },
+// });
+
+// export async function getImagesByQuery(query, currentPage) {
+//     const res = await api.get('', { params: { q: query, page: currentPage } });
+//     return res.data;
+// }
