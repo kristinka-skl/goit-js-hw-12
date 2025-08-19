@@ -26,10 +26,11 @@ async function handleFormElem(e) {
     e.preventDefault();
     clearGallery();
     showLoadInfo();
-    
+    hideLoadMoreButton();
     currentPage = 1;
     query = e.target.elements.searchText.value.trim();
     if (!query) {
+        hideLoadInfo();        
         iziToast.info({
             message: 'Please enter search words',
             position: 'topRight',
